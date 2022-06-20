@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -36,16 +37,15 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col justify-center sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4'>
-         <button className='px-4 py-1 border-2 border-[#4285F4] 
-        text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
-        transition duration-300 md:shadow-lg shadow-sm '>Carbonite Search</button>
-        <button className='px-4 py-1 border-2 border-[#4285F4] 
-        text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
-        transition duration-300 md:shadow-lg shadow-sm '>Randomized Search</button> 
+            <button className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
+              transition duration-300 md:shadow-lg shadow-sm '>Carbonite Search</button>
+            <button className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
+              transition duration-300 md:shadow-lg shadow-sm '>Randomized Search</button> 
         </div>
       </form>
 
       {/* Footer Code Bloc */}
+      <Footer/>
     </div>
   )
 }
