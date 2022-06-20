@@ -1,4 +1,4 @@
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";clearImmediate
 
 export default function User({className}) {
   const { data: session } = useSession();
@@ -17,9 +17,7 @@ export default function User({className}) {
   }
   return (
     <>
-      <button className={`border-2 border-gray-300 text-black px-4 py-2 rounded-md
-        text-1xl font-medium shadow-sm hover:bg-gray-100 transition duration-300 
-        hover:brightness-105 hover:shadow-sm ${className}`} onClick={signIn}>Sign In</button>
+      <button className={`ml-8 mt-3 px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] transition duration-300 md:shadow-lg shadow-sm  ${className}`} onClick={signIn}>Sign In</button>
     </>
   )
 }
