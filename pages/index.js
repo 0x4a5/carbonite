@@ -3,8 +3,20 @@ import Image from "next/image";
 import Header from "../components/Header";
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid";
 import Footer from "../components/Footer";
+import { useRouter } from "next/router";
+import { useRef } from "react";
 
 export default function Home() {
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+  function search(event){
+    event.preventDefault();
+    const term = searchInputRef.current.value;
+    if(!term.trim()) return;
+    router.push(`/search?term=${term.trim()}`)
+  }
+
+
   return (
     <div>
       <Head>
@@ -32,12 +44,12 @@ export default function Home() {
         rounded-md items-center hover:shadow-md focus-within:shadow-md sm:max-w-xl lg:max-w-2xl"
         >
           <SearchIcon className="h-5 text-slate-500 mr-3" />
-          <input type="text" className="flex-grow focus:outline-none" />
+          <input ref={searchInputRef} type="text" className="flex-grow focus:outline-none" />
           <MicrophoneIcon className="h-5 ml-3" />
         </div>
 
         <div className='flex flex-col justify-center sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4'>
-            <button className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
+            <button onClick={search} className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
               transition duration-300 md:shadow-lg shadow-sm '>Carbonite Search</button>
             <button className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
               transition duration-300 md:shadow-lg shadow-sm '>Randomized Search</button> 
