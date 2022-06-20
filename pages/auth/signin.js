@@ -15,7 +15,7 @@ export default function signin({ providers }) {
             <div className="w-full max-w-lg">
               <div className="bg-white md:border md:border-gray-300 md:shadow-lg shadow-sm rounded-2xl p-10 grid place-items-center">
                 <div key={provider.name} className="items-center">
-                  <Image
+                  <Image 
                     src="/cTransImg.png"
                     width={125}
                     height={125}
