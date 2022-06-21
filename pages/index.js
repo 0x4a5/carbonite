@@ -16,6 +16,14 @@ export default function Home() {
     router.push(`/search?term=${term.trim()}&searchType=`)
   }
 
+  async function randomSearch(event) {
+    event.preventDefault();
+    const randomTerm = await fetch(
+      "https://random-word-api.herokuapp.com/word?number=1"
+    ).then((response) => response.json());
+    if (!randomTerm) return;
+    router.push(`/search?term=${randomTerm}&searchType=`);
+  }
 
   return (
     <div>
@@ -51,7 +59,8 @@ export default function Home() {
         <div className='flex flex-col justify-center sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4'>
             <button onClick={search} className='px-4 py-1 border-2 border-[#4c445e] text-black rounded-md text-1xl font-medium hover:bg-[#bbc6e1] 
               transition duration-300 md:shadow-lg shadow-sm '>Carbonite Search</button>
-            <button className='px-4 py-1 border-2 border-[#4c445e] text-black rounded-md text-1xl font-medium hover:bg-[#bbc6e1] 
+            
+            <button onClick={randomSearch} className='px-8 py-1 border-2 border-[#4c445e] text-black rounded-md text-1xl font-medium hover:bg-[#bbc6e1] 
               transition duration-300 md:shadow-lg shadow-sm '>Randomized Search</button> 
         </div>
       </form>
