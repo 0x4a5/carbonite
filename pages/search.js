@@ -5,7 +5,7 @@ import Response from "../Response";
 import { useRouter } from "next/router";
 import ImageResults from "../components/ImageResults";
 
-export default function Search({ results }) {
+export default function Search({results}) {
   console.log(results);
   const router = useRouter();
   return (
@@ -29,7 +29,7 @@ export default function Search({ results }) {
 
 export async function getServerSideProps(context) {
   const startIndex = context.query.start || "1";
-  const mockData = false;
+  const mockData = true;
   const data = mockData
     ? Response
     : await fetch(
