@@ -11,7 +11,7 @@ export default function Search({results}) {
   return (
     <div>
       <Head>
-        <title>{router.query.term} - Search page</title>
+        <title>{router.query.term} - Searched Results</title>
       </Head>
 
       {/* Search Header */}
