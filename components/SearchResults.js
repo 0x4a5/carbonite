@@ -16,10 +16,10 @@ export default function SearchResults({ results }) {
               {result.formattedUrl}
             </a>
             <a
-              className="group-hover:underline decoration-[#4285F4]/70"
+              className="group-hover:underline decoration-[#4c445e]"
               href={result.link}
             >
-              <h2 className="truncate text-xl font-medium text-[#4285F4]/70">
+              <h2 className="truncate text-xl font-medium text-[#4c445e]">
                 {result.title}
               </h2>
             </a>

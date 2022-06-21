@@ -49,9 +49,9 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col justify-center sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4'>
-            <button onClick={search} className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
+            <button onClick={search} className='px-4 py-1 border-2 border-[#4c445e] text-black rounded-md text-1xl font-medium hover:bg-[#bbc6e1] 
               transition duration-300 md:shadow-lg shadow-sm '>Carbonite Search</button>
-            <button className='px-4 py-1 border-2 border-[#4285F4] text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
+            <button className='px-4 py-1 border-2 border-[#4c445e] text-black rounded-md text-1xl font-medium hover:bg-[#bbc6e1] 
               transition duration-300 md:shadow-lg shadow-sm '>Randomized Search</button> 
         </div>
       </form>

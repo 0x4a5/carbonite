@@ -2,9 +2,10 @@ import React from "react";
 import Header from "../../components/Header";
 import { getProviders, signIn } from "next-auth/react";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 
 export default function signin({ providers }) {
+  const router = useRouter();
   return (
     <>
       <Header />
@@ -17,6 +18,7 @@ export default function signin({ providers }) {
                 shadow-sm rounded-2xl p-10 grid place-items-center">
                 <div key={provider.name} className="items-center">
                   <Image 
+                    onClick={() => router.push('/')}
                     src="/cTransImg.png"
                     width={125}
                     height={125}

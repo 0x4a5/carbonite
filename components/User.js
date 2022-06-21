@@ -17,8 +17,8 @@ export default function User({className}) {
   }
   return (
     <>
-      <button className={`ml-8 px-4 py-1 border-2 border-[#4285F4] 
-        text-black rounded-md text-1xl font-medium hover:bg-[#4285F4] 
+      <button className={`ml-8 px-4 py-1 border-2 border-[#4c445e] 
+        text-black rounded-md text-1xl font-medium hover:bg-[#bbc6e1] 
         transition duration-300 md:shadow-lg shadow-sm  ${className}`} 
         onClick={signIn}>Sign In</button>
     </>
