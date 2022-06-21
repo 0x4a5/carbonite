@@ -8,8 +8,8 @@ export default function SearchHeaderOptions() {
   return (
     <div className='flex space-x-8 select-none w-full justify-center text-sm 
         text-slate-700 lg:pl-52 lg:justify-start border-b'>
-        <SearchHeaderOption title='All' Icon={SearchIcon} selected={router.query.searchType == '' || !router.query.searchType}/>
-        <SearchHeaderOption title='images' Icon={PhotographIcon} selected={router.query.searchType == 'image'}/>
+        <SearchHeaderOption title='All' Icon={SearchIcon} selected={router.query.searchType === "" || !router.query.searchType}/>
+        <SearchHeaderOption title='Images' Icon={PhotographIcon} selected={router.query.searchType === "image"}/>
     </div>
   )
 }

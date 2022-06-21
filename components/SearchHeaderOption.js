@@ -13,8 +13,9 @@ export default function SearchHeaderOption({title, Icon, selected }) {
     return (
         <div
           onClick={()=>selectTab(title)}
-          className={`flex items-center space-x-1 border-b-4 border-transparent hover:text-[#4285F4]/90 cursor-pointer hover:border-[#4285F4]/90  pb-3 ${
-            selected && "text-[#4285F4]/90 border-[#4285F4]/90"
+          className={`flex items-center space-x-1 border-b-4 border-transparent
+          hover:text-[#4285F4]/90 cursor-pointer hover:border-[#4285F4]/90
+          pb-3 ${selected && "text-[#4285F4]/90 border-[#4285F4]/90"
           }`}
         >
           <Icon className="h-4" />
