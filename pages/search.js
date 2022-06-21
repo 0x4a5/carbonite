@@ -5,13 +5,13 @@ import Response from "../Response";
 import { useRouter } from "next/router";
 import ImageResults from "../components/ImageResults";
 
-export default function Search({results}) {
+export default function Search({ results }) {
   console.log(results);
   const router = useRouter();
   return (
     <div>
       <Head>
-        <title>{router.query.term} - Searched Results</title>
+        <title>{router.query.term} - Search page</title>
       </Head>
 
       {/* Search Header */}
@@ -27,7 +27,6 @@ export default function Search({results}) {
   );
 }
 
-{/* Moc Data */}
 export async function getServerSideProps(context) {
   const startIndex = context.query.start || "1";
   const mockData = false;
