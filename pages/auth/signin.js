@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function signin({ providers }) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   return (
     <>
