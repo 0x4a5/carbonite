@@ -25,7 +25,7 @@ export default function Header() {
         
           <a onClick={()=>router.push(`/search?term=${router.query.term || "CrisisCoins LLC"}&searchType=image`)} className="link">Images</a>
           
-            <User/>
+           {/* <User/>  */}
         </div>
     </header>
   )

@@ -35,7 +35,7 @@ export default function SearchHeader() {
             <SearchIcon className='h-6 hidden sm:inline-flex text-[#4285F4]'/>
             <button onClick={search} type='submit' hidden></button>
         </form>
-        <User className='ml-auto whitespace-nowrap' />
+        {/* <User className='ml-auto whitespace-nowrap' /> */}
       </div>
       <SearchHeaderOptions/>
     </header>
